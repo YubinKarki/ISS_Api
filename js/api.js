@@ -22,6 +22,7 @@ async function getData() {
         latitude,
         longitude
     } = data;
+    console.log(latitude, longitude);
     marker.setLatLng([latitude, longitude]);
     if(firstTime){
         mymap.setView([latitude, longitude], 3);
@@ -32,4 +33,4 @@ async function getData() {
 }
 
 getData();
-setInterval(getData, 1200);
+setInterval(getData, 1500); // Not ideal in case of slow connection.
